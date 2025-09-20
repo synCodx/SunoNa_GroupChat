@@ -1,8 +1,10 @@
 import { createServer } from 'node:http';
 import express from 'express';
 import { Server } from 'socket.io';
+import dotenv from "dotenv";
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 const server = createServer(app);
 
@@ -46,6 +48,6 @@ app.get('/', (req, res) => {
     res.send('<h1>Hello world</h1>');
 });
 
-server.listen(5000, () => {
-    console.log('server running at http://localhost:5000');
+server.listen(PORT || 5000, () => {
+    console.log(`server running at ${PORT}`);
 });
