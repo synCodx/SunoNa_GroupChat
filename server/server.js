@@ -10,7 +10,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'https://suno-na-group-chat.vercel.app/',
+        origin: 'https://sunona-groupchat.onrender.com',
     },
 });
 
